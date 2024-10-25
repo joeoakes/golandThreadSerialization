@@ -23,11 +23,11 @@ func main() {
 	start := time.Now() // Record the start time
 	fmt.Println(serializeStudent(student1))
 	elapsed := time.Since(start) // Calculate the elapsed time
-	fmt.Printf("Time elapsed: %v\n", elapsed.Milliseconds())
+	fmt.Printf("Time elapsed: %v\n", elapsed.Microseconds())
 	fmt.Println("Function finished!")
 	fmt.Println(serializeStudent(student2))
 	elapsed = time.Since(start) // Calculate the elapsed time
-	fmt.Printf("Time elapsed: %v\n", elapsed.Milliseconds())
+	fmt.Printf("Time elapsed: %v\n", elapsed.Microseconds())
 	fmt.Println("Function 2 finished!")
 
 	var wg sync.WaitGroup
@@ -44,7 +44,7 @@ func main() {
 	}()
 	wg.Wait()
 	elapsed = time.Since(start)
-	fmt.Printf("Time elapsed: %v\n", elapsed.Milliseconds())
+	fmt.Printf("Time elapsed: %v\n", elapsed.Microseconds())
 	fmt.Println("All goroutines completed!")
 }
 
